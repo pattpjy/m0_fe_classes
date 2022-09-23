@@ -2,7 +2,15 @@
 // it should have a dynamic name property
 // it should have a color property, that is silver by default
 // it should have a method called "say" that returns whatever string is passed in, with "*~*" at the beginning and end of the string
-
+class Unicorn {
+  constructor(name,say){
+    this.name = name;
+    this.color = "silver";
+    this.say = `~ Hello,${say} `
+  }
+}
+var uni1 = new Unicorn("Diggory", "Good day, mate");
+console.log(uni1);
 
 
 // Write a class called Vampire
@@ -11,7 +19,20 @@
 // it should have a thirsty property, that is true by default
 // it should have a drink method. When called, the thirsty property changes to false
 
+class Vampire {
+  constructor(name, pet) {
+    this.name = name;
+    this.pet = pet || "bat";
+    this.thirsty = "true";
+  }
+    drink (drinkSome) {
+      this.thirsty = drinkSome;
+    }
+}
 
+var vamp2 = new Vampire("John", "cat");
+vamp2.drink("false");
+console.log(vamp2);
 
 //  Write a Dragon class
 // it should have a dynamic name property (string)
@@ -21,7 +42,22 @@
 //  it should have a eat method. If the dragon eats 4 times, it is no longer hungry
   // HINT: This requires you to use your knowledge from the conditionals lesson
 
-
+  class Dragon {
+        constructor(name, rider, color, meal) {
+          this.name = name;
+          this.rider = rider;
+          this.color = color;
+          this.isHungry = "true"
+        }
+        eat (eatSmth) {
+          if (eatSmth >= 4) {
+            this.isHungry = "false";
+          }
+      }
+      }
+  var dra2 = new Dragon ("John", "Bo", "Red", 4)
+  dra2.eat(4)
+  console.log(dra2)
 
 //  BIG CHALLNEGE: Write a Hobbit class
 //  it should have a dynamic name property (string)
@@ -31,3 +67,27 @@
 //  it should have an isAdult property (boolean) that is false by default. once a Hobbit is 33, it should be an adult
 //  it should have an isOld property that defaults to false. once a Hobbit is 101, it is old.
 //  it should have a hasRing property. If the Hobbit's name is "Frodo", true, if not, false.
+
+
+
+class Hobbit {
+    constructor(name, age) {
+      this.name = name;
+      this.age = 0;
+      this.isAdult = "false"
+
+      this.isOld = "false"
+      this.hasRing = {
+        let keys = "Frodo";
+        if (this.name.includes(keys) = true){
+          return this.hasRing = true
+        } else {
+          return this.hasRing = false
+        }
+
+      }
+    }
+    celebrateBirthday(birthday){
+      this.age = this.age+1;
+    }
+}
